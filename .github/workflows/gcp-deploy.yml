@@ -34,4 +34,5 @@ jobs:
           PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
         run: |
           gcloud config set project $PROJECT_ID
+          cd app
           gcloud app deploy app.yaml --quiet
