@@ -34,5 +34,5 @@ jobs:
           PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
         run: |
           gcloud config set project $PROJECT_ID
-          cd app
-          gcloud app deploy app.yaml --quiet
+          cd app  # Ensure we're in the app directory where app.yaml is located
+          gcloud app deploy app.yaml --quiet  # Deploy app.yaml from the app directory
